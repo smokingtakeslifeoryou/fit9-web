@@ -1,0 +1,9 @@
+# FIT9 ARCHITECTURE & AGENT CONSTRAINTS
+- Стек: Vite + React (SPA) + Tailwind CSS + Lucide Icons.
+- Дизайн: Warm Boutique Wellness (Canvas: #FAF8F5, Dark: #1C1917, Accent: #C5A898). Никакой темной темы!
+- Токены Tailwind: строго префикс `brand-*` (bg, sand, dark, surface, muted, faint, border, accent, accentHover, champagne).
+- Шрифты: Cormorant Garamond Variable (класс font-ed) + Inter Variable (класс font-sans).
+- Никаких монолитов: App.jsx обязан быть статичным контейнером без логики скролла и стейтов модалок.
+- Все секции изолируются в src/components/sections/.
+- Шрифты и SEO: строго статика в index.html. Клиентские useEffect-инъекции запрещены.
+- Интеграция с Listok CRM: в DOM всегда ровно ОДИН экземпляр

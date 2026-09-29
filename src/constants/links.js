@@ -1,0 +1,15 @@
+export const LINKS = {
+  phone: "+79279629969",
+  phoneDisplay: "+7 (927) 962-99-69",
+  whatsapp: "https://wa.me/79279629969",
+  tgAdmin: "https://t.me/fit9_admin",
+  tgChannel: "https://t.me/fit9_ufa",
+  vk: "https://vk.com/fit9ufa",
+  instagram: "https://instagram.com/fit9_ufa",
+  address: "г. Уфа, ул. Менделеева, 132 («Конди Лофт»)",
+  yandexMaps: "https://yandex.ru/maps/-/CDuXeB8C",
+  scheduleOrigin: "https://an10718.listok.online",
+  schedule: "https://an10718.listok.online/wapi",
+  login: "https://an10718.listok.online/client",
+  buy: "https://an10718.listok.online/wapi#prepay",
+};
