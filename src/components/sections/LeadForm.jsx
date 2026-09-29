@@ -128,10 +128,11 @@ function LeadForm() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">
+                  <label htmlFor="lead-name" className="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">
                     Ваше имя
                   </label>
                   <input
+                    id="lead-name"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -141,28 +142,33 @@ function LeadForm() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">
+                  <label htmlFor="lead-phone" className="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">
                     Номер телефона *
                   </label>
                   <input
+                    id="lead-phone"
                     type="tel"
                     value={phone}
                     onChange={handlePhoneChange}
                     placeholder="+7 (___) ___-__-__"
+                    aria-required="true"
+                    aria-invalid={phoneError ? "true" : "false"}
+                    aria-describedby={phoneError ? "lead-phone-error" : undefined}
                     className={`field ${phoneError ? "field-err" : ""}`}
                   />
                   {phoneError && (
-                    <p className="text-xs text-[#C0655A] mt-1.5 font-medium">
+                    <p id="lead-phone-error" className="text-xs text-[#C0655A] mt-1.5 font-medium">
                       Пожалуйста, введите корректный 11-значный номер телефона
                     </p>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">
+                  <label htmlFor="lead-direction" className="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">
                     Интересующее направление
                   </label>
                   <select
+                    id="lead-direction"
                     value={direction}
                     onChange={(e) => setDirection(e.target.value)}
                     className="field"
@@ -177,11 +183,13 @@ function LeadForm() {
 
                 {/* Чекбокс 152-ФЗ */}
                 <div className="pt-2">
-                  <label className="flex items-start gap-3 cursor-pointer text-xs text-brand-muted leading-relaxed select-none">
+                  <label htmlFor="lead-agreed" className="flex items-start gap-3 cursor-pointer text-xs text-brand-muted leading-relaxed select-none">
                     <input
+                      id="lead-agreed"
                       type="checkbox"
                       checked={agreed}
                       onChange={(e) => setAgreed(e.target.checked)}
+                      aria-required="true"
                       className="cbx mt-0.5"
                     />
                     <span>

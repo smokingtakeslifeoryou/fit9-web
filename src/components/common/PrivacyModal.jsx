@@ -45,7 +45,7 @@ function PrivacyModal({ open, onClose }) {
             type="button"
             onClick={onClose}
             className="btn btn-ghost btn-sm !p-2"
-            aria-label="Закрыть модальное окно"
+            aria-label="Закрыть"
           >
             <X className="h-4 w-4" strokeWidth={1.5} />
           </button>

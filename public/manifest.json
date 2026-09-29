@@ -1,0 +1,17 @@
+{
+  "name": "FIT9 Studio — Студия фитнеса и аэройоги",
+  "short_name": "FIT9",
+  "description": "Камерная студия фитнеса, растяжки и аэройоги для девушек в Уфе («Конди Лофт»)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#FAF8F5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
