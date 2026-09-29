@@ -4,18 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FAF8F5" />
     
     <!-- Первичные SEO мета-теги -->
-    <title>FIT9 — Женская студия фитнеса и растяжки в Уфе | Конди Лофт</title>
-    <meta name="description" content="Женская студия фитнеса и растяжки FIT9 в Уфе (пространство «Конди Лофт», ул. Менделеева, 132). Растяжка, здоровая спина, аэройога, TRX. Запишитесь на пробное занятие!" />
-    <meta name="keywords" content="фитнес Уфа, растяжка Уфа, стретчинг Уфа, женский фитнес, Конди Лофт, FIT9, аэройога" />
+    <title>FIT9 Studio — Женская студия фитнеса, растяжки и аэройоги в Уфе | Конди Лофт</title>
+    <meta name="description" content="Женская студия фитнеса, растяжки и аэройоги FIT9 в Уфе (пространство «Конди Лофт», ул. Менделеева, 132). Мини-группы до 8 девушек, заботливые тренеры, тренировки без боли и надрыва. Запишитесь на пробное занятие!" />
+    <meta name="keywords" content="фитнес Уфа, растяжка Уфа, стретчинг Уфа, аэройога Уфа, йога в гамаках Уфа, женский фитнес, Конди Лофт, FIT9, пилатес Уфа, здоровая спина, барре" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Мессенджеры -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="FIT9 — Женская студия фитнеса и растяжки в Уфе" />
-    <meta property="og:description" content="Эстетика Warm Boutique Wellness. Студия FIT9 в пространстве «Конди Лофт»." />
-    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://fit9.ru/" />
+    <meta property="og:title" content="FIT9 Studio — Женская студия фитнеса, растяжки и аэройоги в Уфе" />
+    <meta property="og:description" content="Камерное пространство с высокими потолками в «Конди Лофт». Мини-группы до 8 девушек, заботливые тренеры и тренировки без боли." />
+    <meta property="og:image" content="https://fit9.ru/og-image.jpg" />
     <meta property="og:locale" content="ru_RU" />
 
     <!-- Google Fonts: Cormorant Garamond & Inter (Статический Preconnect и Load) -->
@@ -23,14 +25,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 
-    <!-- Schema.org JSON-LD (Строгая статика, точный адрес) -->
+    <!-- Schema.org JSON-LD (SportsActivityLocation / ExerciseGym) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SportsClub",
-      "name": "FIT9",
-      "legalName": "Женская студия фитнеса и растяжки FIT9",
-      "description": "Студия фитнеса и стретчинга в эстетике Warm Boutique Wellness.",
+      "@type": ["SportsActivityLocation", "ExerciseGym"],
+      "name": "FIT9 Studio",
+      "legalName": "Женская студия фитнеса, растяжки и аэройоги FIT9",
+      "description": "Камерная женская студия фитнеса, растяжки и аэройоги в эстетике Warm Boutique Wellness в Уфе («Конди Лофт»). Мини-группы до 8 девушек, заботливые тренеры, бережный подход.",
+      "url": "https://fit9.ru/",
+      "telephone": "+7 (917) 808-09-09",
+      "image": "https://fit9.ru/og-image.jpg",
+      "priceRange": "₽₽",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "ул. Менделеева, д. 132, пространство «Конди Лофт»",
@@ -43,13 +49,19 @@
         "latitude": "54.7144",
         "longitude": "55.9967"
       },
-      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "84",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
           "opens": "08:00",
-          "closes": "22:00"
+          "closes": "21:00"
         }
       ]
     }
