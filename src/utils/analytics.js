@@ -12,8 +12,8 @@ export const GOALS = {
 export function reachGoal(target, params = {}) {
   if (typeof window !== "undefined" && typeof window.ym === "function") {
     try {
-      /* Заменится на реальный ID счетчика при деплое */
-      window.ym(99999999, "reachGoal", target, params);
+      const ymId = Number(import.meta.env.VITE_YM_ID) || 99999999;
+      window.ym(ymId, "reachGoal", target, params);
     } catch (e) {
       console.warn(`[YM] Target error: ${target}`, e);
     }

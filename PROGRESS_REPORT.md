@@ -4,7 +4,7 @@
 **Стек:** Vite + React + Tailwind CSS + Lucide Icons  
 **Роль:** Lead Frontend Architect (Система Antigravity)  
 **Дата релиза:** 2026-09-29  
-**Финальный статус:** **Релиз v1.0.0 готов к деплою** (Спринты 0, 1, 2, 3A, 3B, 4 полностью закрыты)
+**Финальный статус:** **Релиз v1.0.0 готов к деплою** (Спринты 0, 1, 2, 3A, 3B, 4, 5 полностью закрыты)
 
 ---
 
@@ -35,14 +35,14 @@ rendering chunks...
 computing gzip size...
 dist/index.html                   3.28 kB │ gzip:  1.40 kB
 dist/assets/index-D4ykqCfD.css   25.02 kB │ gzip:  5.93 kB
-dist/assets/index-DZxtk82k.js   205.15 kB │ gzip: 62.48 kB
-✓ built in 1.41s
+dist/assets/index-87NqCVC7.js   205.15 kB │ gzip: 62.48 kB
+✓ built in 1.33s
 ```
 
 - **HTML:** `3.28 kB` (Gzip: `1.40 kB`)
 - **CSS:** `25.02 kB` (Gzip: `5.93 kB`)
 - **JS:** `205.15 kB` (Gzip: `62.48 kB`)
-- **Время компиляции:** `1.41 с`
+- **Время компиляции:** `1.33 с`
 - **Ошибки и предупреждения:** `0`
 
 ---
@@ -69,8 +69,15 @@ dist/assets/index-DZxtk82k.js   205.15 kB │ gzip: 62.48 kB
 
 ## 5. Привязка к GitHub и статус синхронизации
 
-- **Дата и время синхронизации:** 2026-09-29 12:42 (UTC+2)
-- **Хэш релизного коммита:** `2340ffd`
 - **URL удаленного репозитория:** `https://github.com/smokingtakeslifeoryou/fit9-web.git`
 - **Целевая ветка:** `main` (отслеживает `origin/main`)
 - **Статус репозитория:** Репозиторий успешно синхронизирован с GitHub, рабочая директория чиста.
+
+---
+
+## 6. СПРИНТ 5: Подготовка к деплою, CI/CD и переменные окружения
+
+- **Маршрутизация Vercel (`vercel.json`):** Настроен SPA rewrite `{ "source": "/(.*)", "destination": "/index.html" }` для исключения 404 ошибок при обновлении страниц и прямой навигации.
+- **Шаблон окружения (`.env.example`):** Описаны переменные `VITE_YM_ID`, `VITE_TELEGRAM_BOT_TOKEN`, `VITE_TELEGRAM_CHAT_ID`, `VITE_API_ENDPOINT`. В `.gitignore` гарантировано исключение файлов секретов `.env`, `.env.local`, `.env*.local`.
+- **Автоматизация CI (`.github/workflows/ci.yml`):** Развернут GitHub Actions пайплайн (Node.js 20, `actions/checkout@v4`, `actions/setup-node@v4`, `npm ci`, `npm run build`), срабатывающий при push и PR в ветку `main`.
+- **Статус валидации сборки:** Полная целостность `dist/` подтверждена (1613 модулей трансформировано за 1.33 с, 0 ошибок).

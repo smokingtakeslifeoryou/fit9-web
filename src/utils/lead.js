@@ -15,7 +15,8 @@ export async function sendLead(payload) {
   }
 
   try {
-    const response = await fetch("/api/lead", {
+    const endpoint = import.meta.env.VITE_API_ENDPOINT || "/api/lead";
+    const response = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

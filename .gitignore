@@ -16,7 +16,10 @@ lerna-debug.log*
 
 # Environment / Local overrides
 .env
-.env*
+.env.local
+.env.*.local
+.env*.local
+!.env.example
 *.local
 
 # Editor / OS
